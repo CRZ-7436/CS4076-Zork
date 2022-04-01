@@ -1,0 +1,67 @@
+ 	a<	>b	k
+	<		<
+	>		>
+d<	>c	l<	>j<	>m
+<	!		<
+>	>		>
+e<	>f<	>g<	>h
+			<
+			>
+			i
+
+map key:
+<>:bidirectional
+<! or !>; one directional
+
+A:your house;
+
+(has car keys)
+
+B:your car;
+
+(had flashlight, but needs car keys to get it)
+
+C:cave entrance;
+
+(cool rock, pickaxe, helmet)
+
+D:upper mine;
+lots n lots of rocks
+(gold, but needs pickaxe)
+
+E:lower mine;
+lots n lots of slightly bigger rocks
+(cool rock) 
+
+F:Stairs;
+geometrically unsound room that goes up more than should be possible
+()
+
+G:hall way;
+place looks really really modern for being in a mine
+()
+
+H: end of hall way
+theres a big arch and a glass room beside it, the arch has some sort of writing on it.
+()
+
+I:glass room
+inside is what looks to be a translation to the writing on the stone arch
+(translation of stone arch)
+
+J:Ruined castle
+after saying the translation of the writing, a portal opens from the stone
+arch leading a what looks to be the ruins of a stone castle. After
+entering the portal shut behind you.
+()
+
+K:Return portal
+a stone arch similar to the one you entered from sits behind a throne
+
+L: left hand side altar
+a gleaming table made from a material that glows, looks to have offerings on it
+(opens half of portal, but needs offering)
+M:right hand side altar
+unlike the other table, this one is made from look and looks rather plain, on top
+are an odd assortment of items.
+(opens half of portal, but needs offering).

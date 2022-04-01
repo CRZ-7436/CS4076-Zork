@@ -1,3 +1,7 @@
+#include <vector>
+#include <string>
+#include <iostream>
+
 #include "Room.h"
 #include "Command.h"
 
@@ -7,14 +11,18 @@ Room::Room(string description) {
 }
 
 void Room::setExits(Room *north, Room *east, Room *south, Room *west) {
-	if (north != NULL)
-		exits["north"] = north;
-	if (east != NULL)
-		exits["east"] = east;
-	if (south != NULL)
+    if (north != NULL){
+        exits["north"] = north;
+    }
+    if (east != NULL){
+        exits["east"] = east;
+    }
+    if (south != NULL){
 		exits["south"] = south;
-	if (west != NULL)
+    }
+    if (west != NULL){
 		exits["west"] = west;
+    }
 }
 
 string Room::shortDescription() {

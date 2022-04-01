@@ -10,36 +10,48 @@ int main(int argc, char argv[]) {
 }
 
 ZorkUL::ZorkUL() {
-	createRooms();
+    createRooms();
 }
 
 void ZorkUL::createRooms()  {
-	Room *a, *b, *c, *d, *e, *f, *g, *h, *i;
+    Room *a, *b, *c, *d, *e, *f, *g, *h, *i, *j, *k, *l, *m;
 
-	a = new Room("a");
+    a = new Room("Start");
         a->addItem(new Item("x", 1, 11));
         a->addItem(new Item("y", 2, 22));
-	b = new Room("b");
+    b = new Room("b");
         b->addItem(new Item("xx", 3, 33));
         b->addItem(new Item("yy", 4, 44));
-	c = new Room("c");
-	d = new Room("d");
-	e = new Room("e");
-	f = new Room("f");
-	g = new Room("g");
-	h = new Room("h");
-	i = new Room("i");
+    c = new Room("c");
+    d = new Room("d");
+    e = new Room("e");
+    f = new Room("f");
+    g = new Room("g");
+    h = new Room("h");
+    i = new Room("i");
+
+    //rooms I added
+    j = new Room("j");
+    k = new Room("k");
+    l = new Room("l");
+    m = new Room("m");
 
 //             (N, E, S, W)
-	a->setExits(f, b, d, c);
-	b->setExits(NULL, NULL, NULL, a);
-	c->setExits(NULL, a, NULL, NULL);
-	d->setExits(a, e, NULL, i);
-	e->setExits(NULL, NULL, NULL, d);
-	f->setExits(NULL, g, a, h);
-	g->setExits(NULL, NULL, NULL, f);
-	h->setExits(NULL, f, NULL, NULL);
-    i->setExits(NULL, d, NULL, NULL);
+    a->setExits(NULL, b, c, NULL );
+    b->setExits(NULL, NULL, NULL, a);
+    c->setExits(a, NULL, NULL, d);
+    d->setExits(NULL, c , e, NULL);
+    e->setExits(d, f, NULL, NULL);
+    f->setExits(c, g, NULL, e);
+    g->setExits(NULL, h, NULL, f);
+    h->setExits(j, NULL, i, g);
+    i->setExits(h, NULL, NULL, NULL);
+
+    //Rooms i added
+    j->setExits(l, m, h, k);
+    k->setExits(NULL, j, NULL, NULL);
+    l->setExits(NULL, NULL, j, NULL);
+    m->setExits(NULL, NULL, NULL, j);
 
         currentRoom = a;
 }
