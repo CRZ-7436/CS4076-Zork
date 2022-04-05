@@ -65,3 +65,11 @@ M:right hand side altar
 unlike the other table, this one is made from look and looks rather plain, on top
 are an odd assortment of items.
 (opens half of portal, but needs offering).
+
+
+
+personal notes:
+using array list for rooms, will make life easier for teleport function
+use programmer defined exceptions for when cave will shut after entering i.e if flashlight is not obtained
+namespaces should be easy enough if i make my own room creation
+private, and public is the same as namespaces

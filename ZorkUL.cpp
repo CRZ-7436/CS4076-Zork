@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 
 using namespace std;
 #include "ZorkUL.h"
@@ -14,27 +15,28 @@ ZorkUL::ZorkUL() {
 }
 
 void ZorkUL::createRooms()  {
+
     Room *a, *b, *c, *d, *e, *f, *g, *h, *i, *j, *k, *l, *m;
 
-    a = new Room("Start");
+    a = new Room("your house");
         a->addItem(new Item("x", 1, 11));
         a->addItem(new Item("y", 2, 22));
-    b = new Room("b");
+    b = new Room("your car");
         b->addItem(new Item("xx", 3, 33));
         b->addItem(new Item("yy", 4, 44));
-    c = new Room("c");
-    d = new Room("d");
-    e = new Room("e");
-    f = new Room("f");
-    g = new Room("g");
-    h = new Room("h");
-    i = new Room("i");
+    c = new Room("cave entrance");
+    d = new Room("upper mine");
+    e = new Room("lower mine");
+    f = new Room("stairs");
+    g = new Room("hall way");
+    h = new Room("end of hall");
+    i = new Room("glass room");
 
     //rooms I added
-    j = new Room("j");
-    k = new Room("k");
-    l = new Room("l");
-    m = new Room("m");
+    j = new Room("ruined castle");
+    k = new Room("portal home");
+    l = new Room("gleaming table");
+    m = new Room("wooden table");
 
 //             (N, E, S, W)
     a->setExits(NULL, b, c, NULL );
@@ -54,6 +56,7 @@ void ZorkUL::createRooms()  {
     m->setExits(NULL, NULL, NULL, j);
 
         currentRoom = a;
+    */
 }
 
 /**
@@ -103,13 +106,17 @@ bool ZorkUL::processCommand(Command command) {
 
 	else if (commandWord.compare("map") == 0)
 		{
-        cout << "[h] --- [f] --- [g]" << endl;
-		cout << "         |         " << endl;
-        cout << "         |         " << endl;
-		cout << "[c] --- [a] --- [b]" << endl;
-		cout << "         |         " << endl;
-		cout << "         |         " << endl;
-		cout << "[i] --- [d] --- [e]" << endl;
+        cout << " 	   [a]---[b]---[k]" << endl;
+        cout << "       |           |" << endl;
+        cout << "[d]---[c]	 [l]---[j]---[m]" << endl;
+        cout << " |	    |!          |" << endl;
+        cout << "[e]---[f]---[g]---[h]" << endl;
+        cout << "			        |" << endl;
+        cout << "                  [i]" << endl;
+        cout << "symbol key:" << endl;
+        cout << "-:bidirectional" << endl;
+        cout << "!| or |!: one directional" << endl;
+
 		}
 
 	else if (commandWord.compare("go") == 0)
