@@ -56,7 +56,6 @@ void ZorkUL::createRooms()  {
     m->setExits(NULL, NULL, NULL, j);
 
         currentRoom = a;
-    */
 }
 
 /**
@@ -106,12 +105,12 @@ bool ZorkUL::processCommand(Command command) {
 
 	else if (commandWord.compare("map") == 0)
 		{
-        cout << " 	   [a]---[b]---[k]" << endl;
+        cout << "      [a]---[b]   [k]" << endl;
         cout << "       |           |" << endl;
-        cout << "[d]---[c]	 [l]---[j]---[m]" << endl;
-        cout << " |	    |!          |" << endl;
+        cout << "[d]---[c]   [l]---[j]---[m]" << endl;
+        cout << " |     |           |" << endl;
         cout << "[e]---[f]---[g]---[h]" << endl;
-        cout << "			        |" << endl;
+        cout << "                   |" << endl;
         cout << "                  [i]" << endl;
         cout << "symbol key:" << endl;
         cout << "-:bidirectional" << endl;

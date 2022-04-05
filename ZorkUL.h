@@ -20,6 +20,7 @@ private:
 	void goRoom(Command command);
     void createItems();
     void displayItems();
+    void teleport(string direction);
 
 public:
 	ZorkUL();
