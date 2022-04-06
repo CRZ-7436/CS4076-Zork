@@ -16,27 +16,28 @@ ZorkUL::ZorkUL() {
 }
 
 void ZorkUL::createRooms()  {
+
     Room *a, *b, *c, *d, *e, *f, *g, *h, *i, *j, *k, *l, *m;
 
-    a = new Room("your house"); // 0
+    a = new Room("your house");
         a->addItem(new Item("x", 1, 11));
         a->addItem(new Item("y", 2, 22));
-    b = new Room("your car"); // 1
+    b = new Room("your car");
         b->addItem(new Item("xx", 3, 33));
         b->addItem(new Item("yy", 4, 44));
-    c = new Room("cave entrance"); // 2
-    d = new Room("upper mine"); // 3
-    e = new Room("lower mine"); // 4
-    f = new Room("stairs"); // 5
-    g = new Room("hall way"); // 6
-    h = new Room("end of hall"); // 7
-    i = new Room("glass room"); // 8
+    c = new Room("cave entrance");
+    d = new Room("upper mine");
+    e = new Room("lower mine");
+    f = new Room("stairs");
+    g = new Room("hall way");
+    h = new Room("end of hall");
+    i = new Room("glass room");
 
     //rooms I added
-    j = new Room("ruined castle"); // 9
-    k = new Room("portal home"); // 10
-    l = new Room("gleaming table"); // 11
-    m = new Room("wooden table"); // 12
+    j = new Room("ruined castle");
+    k = new Room("portal home");
+    l = new Room("gleaming table");
+    m = new Room("wooden table");
 
 //             (N, E, S, W)
     a->setExits(NULL, b, c, NULL );
@@ -55,23 +56,7 @@ void ZorkUL::createRooms()  {
     l->setExits(NULL, NULL, j, NULL);
     m->setExits(NULL, NULL, NULL, j);
 
-    rooms.push_back(*a); // this puts the rooms into a vector for my teleport functions
-    rooms.push_back(*b);
-    rooms.push_back(*c);
-    rooms.push_back(*d);
-    rooms.push_back(*e);
-    rooms.push_back(*f);
-    rooms.push_back(*g);
-    rooms.push_back(*h);
-    rooms.push_back(*i);
-    rooms.push_back(*j);
-    rooms.push_back(*k);
-    rooms.push_back(*l);
-    rooms.push_back(*m);
-
-
-
-    currentRoom = a;
+        currentRoom = a;
 }
 
 /**
@@ -136,8 +121,6 @@ bool ZorkUL::processCommand(Command command) {
 
 	else if (commandWord.compare("go") == 0)
 		goRoom(command);
-    else if (commandWord.compare("random teleport") == 0)
-        randTeleport();
 
     else if (commandWord.compare("take") == 0)
     {
@@ -220,9 +203,4 @@ string ZorkUL::go(string direction) {
 		currentRoom = nextRoom;
 		return currentRoom->longDescription();
 	}
-}
-
-string ZorkUL::randTeleport(){
-    currentRoom = &rooms.at((int) rand() % rooms.size());
-    return currentRoom->longDescription();
 }

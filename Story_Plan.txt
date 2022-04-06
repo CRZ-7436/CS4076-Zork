@@ -1,13 +1,17 @@
- 	 a-	-b-	-k
-	 |		 |
-d-	-c	l-	-j-	-m
-|	 |! 		 |		>
-e-	-f-	-g-	-h
-			 |
-			 i
-symbol key:
--:bidirectional
-!| or |!: one directional
+ 	a<	>b	k
+	<		<
+	>		>
+d<	>c	l<	>j<	>m
+<	!		<
+>	>		>
+e<	>f<	>g<	>h
+			<
+			>
+			i
+
+map key:
+<>:bidirectional
+<! or !>; one directional
 
 A:your house;
 
