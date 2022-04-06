@@ -20,12 +20,13 @@ private:
 	void goRoom(Command command);
     void createItems();
     void displayItems();
-    void teleport(string direction);
+    vector<Room> rooms;
 
 public:
 	ZorkUL();
 	void play();
 	string go(string direction);
+    string randTeleport();
 };
 
 #endif /*ZORKUL_H_*/
