@@ -9,11 +9,6 @@ using namespace std;
 
 extern string mapKey;
 
-string key1 = "symbol key: \n"; //operator overloading and global variable
-string key2 = "- or |:bidirectional";
-string key3 = "!- or -!, !| or |!: one directional";
-string mapKey = key1 + key2 + key3;
-
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
@@ -237,5 +232,5 @@ string ZorkUL::go(string direction) {
 string ZorkUL::randTeleport(){
     currentRoom = &rooms.at((int) rand() % rooms.size());
     cout << currentRoom->longDescription() << endl;
-    return "";
+    return ""; // idk why this works but it does, if it isnt there it teleports without returning the description
 }
