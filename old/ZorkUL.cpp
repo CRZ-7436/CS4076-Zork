@@ -121,13 +121,19 @@ bool ZorkUL::processCommand(Command command) {
         cout << "      [a]---[b]   [k]" << endl;
         cout << "       |           |" << endl;
         cout << "[d]---[c]   [l]---[j]---[m]" << endl;
-        cout << " |     |           |" << endl;
+        cout << " |     |!          |" << endl;
         cout << "[e]---[f]---[g]---[h]" << endl;
         cout << "                   |" << endl;
         cout << "                  [i]" << endl;
+        /*
         cout << "symbol key:" << endl;
         cout << "-:bidirectional" << endl;
-        cout << "!| or |!: one directional" << endl;
+        cout << "!| or |!: one directional" << endl;*/
+        string key1 = "symbol key: \n";
+        string key2 = "- or |:bidirectional \n";
+        string key3 = "!- or -!, !| or |!: one directional \n";
+        string totalKey = key1 + key2 + key3;
+        cout << totalKey << endl;
 
 		}
 
@@ -221,5 +227,6 @@ string ZorkUL::go(string direction) {
 string ZorkUL::randTeleport(){
     currentRoom = &rooms.at((int) rand() % rooms.size());
     cout << currentRoom->longDescription() << endl;
-    return "";
+    return ""; // I've no clue why this works, but it does, if this isn't here it wont output the room description
 }
+

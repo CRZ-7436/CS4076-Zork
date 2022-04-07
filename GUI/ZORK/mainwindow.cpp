@@ -1,6 +1,10 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "ZorkUL.h"
+#include <iostream>
+
+extern string mapKey;
+
 MainWindow::MainWindow(QWidget *parent) // constructor
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -14,48 +18,24 @@ MainWindow::~MainWindow() // destructor
     delete ui;
 }
 
-
-string MainWindow::NorthButton()
+void MainWindow::on_pushButton_7_clicked()
 {
-    Command dir = Command("go", "north");
-}
-
-void MainWindow::EastButton()
-{
-
-}
-
-void MainWindow::SouthButton()
-{
-
+    /*ui->AdventureText->setText(currentRoom->longDescription());*/
 }
 
 
-void MainWindow::WestButton()
+void MainWindow::on_pushButton_9_clicked()
 {
-
-}
-
-
-void MainWindow::TeleportButton()
-{
-
-}
-
-
-void MainWindow::MapButton()
-{
-
-}
-
-void MainWindow::UseItem()
-{
-
-}
-
-
-void MainWindow::TakeItem()
-{
-
+    ui->AdventureText->setText("         [a]---[b]    [k]        \n"
+                               "          |                |         \n"
+                               "[d]---[c]      [l]---[j]---[m]  \n"
+                               " |        |!              |         \n"
+                               "[e]---[f]---[g]---[h]        \n"
+                               "                          |         \n"
+                               "                          [i]        \n"
+                               "symbol key: \n"
+                               "- or |:bidirectional \n"
+                               "!- or -!, !| or |!: one directional \n"
+                               );
 }
 

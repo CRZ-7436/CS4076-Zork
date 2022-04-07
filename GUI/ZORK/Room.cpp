@@ -5,6 +5,10 @@
 #include "Room.h"
 #include "Command.h"
 
+string key1 = "symbol key: \n";         //  operator overloading and global variable and saves me from typing it all out again
+string key2 = "- or |:bidirectional \n";   //  i would include the map in this as well but when i put the map into the UI the format comes out wrong
+string key3 = "!- or -!, !| or |!: one directional \n";
+string mapKey = key1 + key2 + key3;
 
 Room::Room(string description) {
     this->description = description;

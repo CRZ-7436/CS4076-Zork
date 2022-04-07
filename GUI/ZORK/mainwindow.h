@@ -17,14 +17,9 @@ public:
     ~MainWindow();
 
 private slots:
-    string NorthButton();
-    void EastButton();
-    void SouthButton();
-    void WestButton();
-    void TeleportButton();
-    void MapButton();
-    void UseItem();
-    void TakeItem();
+    void on_pushButton_7_clicked();
+
+    void on_pushButton_9_clicked();
 
 private:
     Ui::MainWindow *ui;

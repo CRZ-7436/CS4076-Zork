@@ -20,7 +20,9 @@ private:
     void goRoom(Command command);
     void createItems();
     void displayItems();
-        vector<Room> rooms;
+
+protected:
+    vector<Room> rooms;
 
 public:
     ZorkUL();

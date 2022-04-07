@@ -1,15 +1,25 @@
 #include <iostream>
 #include <vector>
 #include <QApplication>
+#include <QLabel>
 
 using namespace std;
 #include "ZorkUL.h"
 #include "mainwindow.h"
 
+extern string mapKey;
+
+string key1 = "symbol key: \n"; //operator overloading and global variable
+string key2 = "- or |:bidirectional";
+string key3 = "!- or -!, !| or |!: one directional";
+string mapKey = key1 + key2 + key3;
+
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     MainWindow w;
+    QLabel *label = new QLabel();
+    label->setWindowTitle("CS4076-Zork");
     w.show();
     return a.exec();
 }
@@ -24,14 +34,16 @@ void ZorkUL::createRooms()  {
     Room *a, *b, *c, *d, *e, *f, *g, *h, *i, *j, *k, *l, *m;
 
     a = new Room("your house");
-        a->addItem(new Item("x", 1, 11));
-        a->addItem(new Item("y", 2, 22));
+        a->addItem(new Item("Car Keys", 1, 11));
     b = new Room("your car");
-        b->addItem(new Item("xx", 3, 33));
-        b->addItem(new Item("yy", 4, 44));
+        b->addItem(new Item("Flash Light", 3, 33));
     c = new Room("cave entrance");
+        c->addItem(new Item("Cool Rock", 3, 33));
+        c->addItem(new Item("Pickaxe", 3, 33));
     d = new Room("upper mine");
+        d->addItem(new Item("Gold", 3, 33));
     e = new Room("lower mine");
+        e->addItem(new Item("Cooler Rock", 3, 33));
     f = new Room("stairs");
     g = new Room("hall way");
     h = new Room("end of hall");
@@ -59,6 +71,7 @@ void ZorkUL::createRooms()  {
     k->setExits(NULL, j, NULL, NULL);
     l->setExits(NULL, NULL, j, NULL);
     m->setExits(NULL, NULL, NULL, j);
+
     currentRoom = a;
 
     rooms.push_back(*a); // this puts the rooms into a vector for my teleport functions
@@ -123,16 +136,14 @@ bool ZorkUL::processCommand(Command command) {
 
     else if (commandWord.compare("map") == 0)
         {
-        cout << "      [a]---[b]   [k]" << endl;
+        cout << "      [a]---[b]   [k] \n" << endl;
         cout << "       |           |" << endl;
         cout << "[d]---[c]   [l]---[j]---[m]" << endl;
-        cout << " |     |           |" << endl;
+        cout << " |     |!          |" << endl;
         cout << "[e]---[f]---[g]---[h]" << endl;
         cout << "                   |" << endl;
         cout << "                  [i]" << endl;
-        cout << "symbol key:" << endl;
-        cout << "-:bidirectional" << endl;
-        cout << "!| or |!: one directional" << endl;
+        cout << mapKey << endl;
 
         }
 
