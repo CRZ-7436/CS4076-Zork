@@ -16,6 +16,16 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+    string NorthButton();
+    void EastButton();
+    void SouthButton();
+    void WestButton();
+    void TeleportButton();
+    void MapButton();
+    void UseItem();
+    void TakeItem();
+
 private:
     Ui::MainWindow *ui;
     ZorkUL* zork;

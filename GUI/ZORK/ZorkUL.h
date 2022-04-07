@@ -15,7 +15,7 @@ private:
     Room *currentRoom;
     void createRooms();
     void printWelcome();
-    bool processCommand(Command command);
+    /*bool processCommand(Command command);*/
     void printHelp();
     void goRoom(Command command);
     void createItems();
@@ -27,6 +27,7 @@ public:
     void play();
     string go(string direction);
     string randTeleport();
+    bool processCommand(Command command);
 };
 
 #endif /*ZORKUL_H_*/

@@ -220,5 +220,6 @@ string ZorkUL::go(string direction) {
 }
 string ZorkUL::randTeleport(){
     currentRoom = &rooms.at((int) rand() % rooms.size());
-    return currentRoom->longDescription();
+    cout << currentRoom->longDescription() << endl;
+    return "";
 }
