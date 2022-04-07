@@ -5,10 +5,9 @@ using namespace std;
 #include "ZorkUL.h"
 
 int main(int argc, char argv[]) {
-    QApplication a(argc, argv);
-    MainWindow w;
-    w.show();
-    return a.exec();
+    ZorkUL temp;
+    temp.play();
+    return 0;
 }
 
 ZorkUL::ZorkUL() {
@@ -55,8 +54,21 @@ void ZorkUL::createRooms()  {
     k->setExits(NULL, j, NULL, NULL);
     l->setExits(NULL, NULL, j, NULL);
     m->setExits(NULL, NULL, NULL, j);
+    currentRoom = a;
 
-        currentRoom = a;
+    rooms.push_back(*a); // this puts the rooms into a vector for my teleport functions
+    rooms.push_back(*b);
+    rooms.push_back(*c);
+    rooms.push_back(*d);
+    rooms.push_back(*e);
+    rooms.push_back(*f);
+    rooms.push_back(*g);
+    rooms.push_back(*h);
+    rooms.push_back(*i);
+    rooms.push_back(*j);
+    rooms.push_back(*k);
+    rooms.push_back(*l);
+    rooms.push_back(*m);
 }
 
 /**
@@ -119,8 +131,10 @@ bool ZorkUL::processCommand(Command command) {
 
 		}
 
-	else if (commandWord.compare("go") == 0)
-		goRoom(command);
+    else if (commandWord.compare("go") == 0)
+        goRoom(command);
+    else if (commandWord.compare("randomteleport") == 0)
+        randTeleport();
 
     else if (commandWord.compare("take") == 0)
     {
@@ -203,4 +217,8 @@ string ZorkUL::go(string direction) {
 		currentRoom = nextRoom;
 		return currentRoom->longDescription();
 	}
+}
+string ZorkUL::randTeleport(){
+    currentRoom = &rooms.at((int) rand() % rooms.size());
+    return currentRoom->longDescription();
 }
