@@ -17,6 +17,7 @@ public:
     ~MainWindow();
     ZorkUL* zork;
     void setPictures();
+    void endGame();
 
 private slots:
     void on_pushButton_7_clicked();

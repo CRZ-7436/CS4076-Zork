@@ -5,6 +5,7 @@
 #include <iostream>
 #include <QPixmap>
 #include <QMessageBox>
+#include <stdlib.h>
 
 extern string mapKey;
 
@@ -140,6 +141,12 @@ void MainWindow::setPictures(){
     else if(zork->currentRoom->shortDescription() == "wooden table"){
         QPixmap pix13(":/images/images/woodenTable.PNG");
         ui->picture->setPixmap(pix13.scaled(250,250,Qt::KeepAspectRatio));
+    }
+}
+
+void MainWindow::endGame(){
+    if (zork->currentRoom->shortDescription() == "portal home"){
+        exit(0);
     }
 }
 

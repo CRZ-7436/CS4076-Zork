@@ -7,6 +7,7 @@ using namespace std;
 #include "ZorkUL.h"
 #include "mainwindow.h"
 
+
 extern string mapKey;
 
 int main(int argc, char *argv[])
@@ -230,7 +231,8 @@ string ZorkUL::go(string direction) {
     }
 }
 string ZorkUL::randTeleport(){
-    currentRoom = &rooms.at((int) rand() % rooms.size());
+    currentRoom = &rooms.at((int) rand() % rooms.size()); // reference
     cout << currentRoom->longDescription() << endl;
     return ""; // idk why this works but it does, if it isnt there it teleports without returning the description
 }
+

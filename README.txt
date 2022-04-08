@@ -3,15 +3,11 @@ namespaces
 Pointers
 Header files
 Private, Public, Protected
-template classes
 operator overloading
 global variables
-
-TO DO LIST
-programmer defined exceptions
-intializer list
+advanced pre-processor directives
 c++ references
-
+initialiser list
 
 Requirements not completed
 virtual functions
@@ -21,11 +17,10 @@ unions
 abstract classes
 copy constructors
 bit structures
-advanced pre-processors directives
 c++ object construction sequences
 intializer list
-c++ references
 inheritance
 memory management
 arrays and pointers
 friendship
+template classes

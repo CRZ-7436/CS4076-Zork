@@ -16,7 +16,8 @@ SOURCES += \
     Room.cpp \
     ZorkUL.cpp \
     item.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    wordle.cpp
 
 HEADERS += \
     Character.h \
@@ -26,7 +27,8 @@ HEADERS += \
     Room.h \
     ZorkUL.h \
     item.h \
-    mainwindow.h
+    mainwindow.h \
+    wordle.h
 
 FORMS += \
     mainwindow.ui
