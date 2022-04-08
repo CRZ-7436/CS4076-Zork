@@ -16,6 +16,7 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
     ZorkUL* zork;
+    void setPictures();
 
 private slots:
     void on_pushButton_7_clicked();

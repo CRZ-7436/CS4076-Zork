@@ -105,7 +105,7 @@
      <enum>QFrame::Box</enum>
     </property>
     <property name="text">
-     <string>Welcome</string>
+     <string>Welcome, please press info</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -137,7 +137,7 @@
      <string>take item</string>
     </property>
    </widget>
-   <widget class="QLabel" name="PictureLabel">
+   <widget class="QLabel" name="picture">
     <property name="geometry">
      <rect>
       <x>325</x>
@@ -150,7 +150,7 @@
      <enum>QFrame::Box</enum>
     </property>
     <property name="text">
-     <string>picture here</string>
+     <string/>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -188,7 +188,7 @@
      <enum>QFrame::Box</enum>
     </property>
     <property name="text">
-     <string>TextLabel</string>
+     <string>Wordle Stuff</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_12">
@@ -204,6 +204,19 @@
      <string>info</string>
     </property>
    </widget>
+   <zorder>pushButton_4</zorder>
+   <zorder>pushButton_5</zorder>
+   <zorder>pushButton_6</zorder>
+   <zorder>pushButton_7</zorder>
+   <zorder>pushButton_8</zorder>
+   <zorder>pushButton_9</zorder>
+   <zorder>AdventureText</zorder>
+   <zorder>pushButton_10</zorder>
+   <zorder>pushButton_11</zorder>
+   <zorder>InventoryLabel</zorder>
+   <zorder>label</zorder>
+   <zorder>pushButton_12</zorder>
+   <zorder>picture</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

@@ -16,7 +16,6 @@ SOURCES += \
     Room.cpp \
     ZorkUL.cpp \
     item.cpp \
-    main.cpp \
     mainwindow.cpp
 
 HEADERS += \
@@ -36,3 +35,6 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    images.qrc
