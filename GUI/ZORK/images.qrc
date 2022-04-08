@@ -2,5 +2,16 @@
     <qresource prefix="/images">
         <file>images/treehouse.png</file>
         <file>images/cave.png</file>
+        <file>images/car.PNG</file>
+        <file>images/castleRuins.PNG</file>
+        <file>images/endOfHall.PNG</file>
+        <file>images/glassRoom.PNG</file>
+        <file>images/glassTable.PNG</file>
+        <file>images/hallway.PNG</file>
+        <file>images/lowerMine.PNG</file>
+        <file>images/portalhome.PNG</file>
+        <file>images/stairs.PNG</file>
+        <file>images/upperMine.PNG</file>
+        <file>images/woodenTable.PNG</file>
     </qresource>
 </RCC>
